@@ -7,12 +7,6 @@ import WhyHZN from './components/whyhzn';
 import ProgramDetails from './components/programdetails';
 import GetConnected from './components/getconnected';
 import ErrorBoundary from './components/errorboundary';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Join HZN | AI + HZN',
-  description: 'Start your journey with AI + HZN and build the future of decentralized AI on NEAR.',
-}
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('JOIN HZN');

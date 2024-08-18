@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'FK Grotesk';
+  src: url('/fonts/FKGrotesk-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  src: url('/fonts/FKGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FK Grotesk';
+  src: url('/fonts/FKGrotesk-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +38,7 @@
 }
 
 body {
+  font-family: 'FK Grotesk', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
