@@ -39,7 +39,7 @@ const WhyHZN: React.FC = () => {
     <div className="border border-[#9696FE] rounded-3xl p-8">
       <h1 className="text-5xl font-bold mb-6">Why Choose HZN for Your AI Journey?</h1>
       <p className="mb-8 max-w-2xl">
-        At NEAR Horizon, we're dedicated to empowering the next generation of AI pioneers. By joining our incubation program, you'll be at the forefront of developing decentralized AI applications that prioritize user ownership and privacy.
+        At NEAR Horizon, we&apos;re dedicated to empowering the next generation of AI pioneers. By joining our incubation program, you&apos;ll be at the forefront of developing decentralized AI applications that prioritize user ownership and privacy.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

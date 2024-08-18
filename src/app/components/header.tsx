@@ -25,18 +25,19 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full px-4 py-4 md:py-8 bg-black">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="w-40 md:w-60">
-          <Image src="/images/logo/AI + HZN.svg" alt="AI + HZN Logo" width={231} height={93} layout="responsive" />
+      <div className="max-w-[1421px] mx-auto flex justify-between items-center">
+        <div className="w-[231px] h-[93px] relative">
+          <Image src="/images/logo/AI + HZN Logo.svg" alt="AI + HZN Logo" layout="fill" objectFit="contain" />
         </div>
         
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <li key={item.name}>
                 <Link 
                   href={item.href}
-                  className="text-[#9797FF] text-sm font-medium hover:text-white transition-colors"
+                  className="text-[#9797FF] text-xs font-medium font-['FK Grotesk'] hover:text-white transition-colors"
+                  style={{ left: `${987 + index * 71}px` }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -65,7 +66,7 @@ const Header: React.FC = () => {
               <li key={item.name}>
                 <Link 
                   href={item.href}
-                  className="text-[#9797FF] text-sm font-medium hover:text-white transition-colors"
+                  className="text-[#9797FF] text-xs font-medium font-['FK Grotesk'] hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

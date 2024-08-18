@@ -82,7 +82,7 @@ const ProgramDetails: React.FC = () => {
         <ul className="list-disc list-inside space-y-2">
           <li>Repeat founders with strong technical skills.</li>
           <li>AI/ML Researchers spinning out projects from academic institutions</li>
-          <li>Ex-VC's with a unique perspective on the market</li>
+          <li>Ex-VCs with a unique perspective on the market</li>
           <li>Degens who understand crypto native distribution</li>
         </ul>
       </div>
@@ -129,7 +129,7 @@ const ProgramDetails: React.FC = () => {
               <Image src="/images/icons/technical.svg" alt="Technical Support" width={24} height={24} className="mr-4 mt-1" />
               <div>
                 <h3 className="font-semibold">Technical Support:</h3>
-                <p>Dedicated technical assistance to integrate with NEAR's AI ecosystem.</p>
+                <p>Dedicated technical assistance to integrate with NEAR&apos;s AI ecosystem.</p>
               </div>
             </div>
             <div className="flex items-start">

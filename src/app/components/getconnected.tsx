@@ -46,7 +46,7 @@ const GetConnected: React.FC = () => {
           <div className="mt-6">
             <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Community Engagement:</h2>
             <p>
-              Engage with NEAR's community of developers, researchers, and
+              Engage with NEAR&apos;s community of developers, researchers, and
               AI enthusiasts.
             </p>
           </div>
@@ -57,9 +57,9 @@ const GetConnected: React.FC = () => {
             <Image 
               src="/images/illustrations/ai-community.svg" 
               alt="AI Community Illustration" 
-              width={300} 
-              height={300} 
-              layout="responsive"
+              width={300}
+              height={300}
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </div>
