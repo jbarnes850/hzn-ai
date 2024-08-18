@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI + HZN: NEAR AI Incubation Program
+
+NEAR is the ecosystem that enables User-Owned AI. The AI + HZN Incubation program is an 8-week experience designed for early-stage AI projects building at the intersection of AI and Web3. This codebase is the website for the program and is built with Next.js, Tailwind CSS, and TypeScript.
 
 ## Getting Started
 
@@ -16,21 +18,35 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The main components of the application are:
+
+- `src/app/page.tsx`: The main page component with tab navigation
+- `src/app/components/header.tsx`: The header component with navigation links
+- `src/app/components/landingpage.tsx`: The landing page component
+- `src/app/components/whyhzn.tsx`: Component explaining the benefits of HZN
+- `src/app/components/programdetails.tsx`: Details about the incubation program
+- `src/app/components/getconnected.tsx`: Information on how to connect with the community
+
+## Features
+
+- Responsive design using Tailwind CSS
+- Tab-based navigation for different sections of the site
+- Integration with external links for program application and community engagement
+
+## Deployment
+
+This project is configured for deployment on Vercel. The `package.json` file includes the necessary scripts for building and starting the application.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [NEAR Protocol](https://near.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions to improve the AI + HZN website are welcome. Please ensure to follow the existing code style and add appropriate tests for new features.
