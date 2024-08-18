@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-interface PastTeam {
+interface FeaturedProject {
   name: string;
   logo: string;
 }
@@ -12,10 +12,10 @@ interface Speaker {
 }
 
 const ProgramDetails: React.FC = () => {
-  const pastTeams: PastTeam[] = [
+  const featuredProjects: FeaturedProject[] = [
     { name: 'Ringfence', logo: '/images/logo/ringfence.svg' },
     { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png' },
-    { name: 'nevermined', logo: '/images/logo/nevermined.png' },
+    { name: 'nevermined', logo: '/images/logo/nevermind.png' },
     { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png' },
     { name: 'exaBITS', logo: '/images/logo/exabits.png' },
     { name: 'Pond', logo: '/images/logo/pond.svg' }
@@ -35,13 +35,13 @@ const ProgramDetails: React.FC = () => {
   ];
 
   return (
-    <div className="border border-[#9696FE] rounded-3xl p-8 text-white">
-      <div className="flex mb-12">
+    <div className="border border-[#9696FE] rounded-3xl p-12 text-white">
+      <div className="flex mb-12 gap-12">
         {/* Left Column - Image and Apply Button */}
         <div className="w-1/2 pr-8">
           <div className="bg-[#9696FE] rounded-2xl p-4 mb-6">
             <Image 
-              src="/images/illustrations/program-details.svg" 
+              src="/images/illustrations/program-details-cal.svg" 
               alt="Program Details Illustration" 
               width={400} 
               height={300} 
@@ -57,15 +57,18 @@ const ProgramDetails: React.FC = () => {
 
         {/* Right Column - Program Details */}
         <div className="w-1/2">
-          <h1 className="text-4xl font-bold mb-6">
-            The AI + HZN Batch 2 begins on September 23rd, 2024. Our program is designed to support top-tier AI and blockchain founders with a comprehensive suite of resources and support.
+          <h1 className="text-3xl font-bold mb-6">
+            The <span className="text-[#9696FE]">AI + HZN Batch II</span> begins on September 23rd, 2024.
           </h1>
+          <p className="mb-6">
+            Our program is designed to support top-tier AI and blockchain founders with a comprehensive suite of resources and support.
+          </p>
 
           <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Program Overview:</h2>
 
-          <div className="space-y-4">
+          <div className="space-y-4 mb-8">
             <div>
-              <p className="font-semibold">Start Date: September 16th, 2024</p>
+              <p className="font-semibold mb-1">Start Date: September 23rd, 2024</p>
               <p>Time Commitment: 3-5 hours per week</p>
             </div>
             <p>
@@ -73,27 +76,34 @@ const ProgramDetails: React.FC = () => {
               Our cohort sizes are small, focusing on 4-6 teams in each batch.
             </p>
           </div>
+
+          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Profiles of Previous Founders</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Repeat founders with strong technical skills.</li>
+            <li>AI/ML Researchers spinning out projects from academic institutions</li>
+            <li>Ex-VCs with a unique perspective on the market</li>
+            <li>Degens who understand crypto native distribution</li>
+          </ul>
         </div>
       </div>
 
-      {/* Profiles of Previous Founders */}
+      {/* Featured Projects */}
       <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Profiles of Previous Founders</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Repeat founders with strong technical skills.</li>
-          <li>AI/ML Researchers spinning out projects from academic institutions</li>
-          <li>Ex-VCs with a unique perspective on the market</li>
-          <li>Degens who understand crypto native distribution</li>
-        </ul>
-      </div>
-
-      {/* Past Teams */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Past Teams</h2>
+        <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Featured AI Projects</h2>
         <div className="grid grid-cols-3 gap-4">
-          {pastTeams.map((team) => (
-            <div key={team.name} className="bg-[#1E1E1E] p-4 rounded-lg">
-              <Image src={`/images/logos/${team.logo}`} alt={team.name} width={100} height={50} layout="responsive" />
+          {featuredProjects.map((project) => (
+            <div 
+              key={project.name} 
+              className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
+            >
+              <Image 
+                src={project.logo} 
+                alt={project.name} 
+                width={120} 
+                height={60} 
+                objectFit="contain"
+                className="max-h-24"
+              />
             </div>
           ))}
         </div>
@@ -102,12 +112,12 @@ const ProgramDetails: React.FC = () => {
       {/* Previous Speakers */}
       <div className="mb-12">
         <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Previous Speakers Include:</h2>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 gap-6">
           {speakers.map((speaker) => (
-            <div key={speaker.name} className="text-center">
-              <Image src={`/images/headshots/${speaker.image}`} alt={speaker.name} width={80} height={80} className="rounded-full mb-2" />
-              <p className="font-semibold">{speaker.name}</p>
-              <p className="text-sm">{speaker.company}</p>
+            <div key={speaker.name} className="text-center flex flex-col items-center">
+              <Image src={`/images/headshots/${speaker.image}`} alt={speaker.name} width={80} height={80} className="rounded-full mb-3" />
+              <p className="font-semibold text-sm mb-1">{speaker.name}</p>
+              <p className="text-xs">{speaker.company}</p>
             </div>
           ))}
         </div>
@@ -116,26 +126,26 @@ const ProgramDetails: React.FC = () => {
       {/* Support and Benefits */}
       <div className="flex">
         <div className="w-2/3 pr-8">
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Support and Benefits:</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-semibold text-[#9696FE] mb-6">Support and Benefits:</h2>
+          <div className="space-y-8">
             <div className="flex items-start">
-              <Image src="/images/icons/financial.svg" alt="Financial Support" width={24} height={24} className="mr-4 mt-1" />
+              <Image src="/images/icons/coin-1.png" alt="Financial Support" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h3 className="font-semibold">Financial Support:</h3>
+                <h3 className="font-semibold mb-2">Financial Support:</h3>
                 <p>Token-based grants and compute credits from the NEAR Foundation.</p>
               </div>
             </div>
             <div className="flex items-start">
-              <Image src="/images/icons/technical.svg" alt="Technical Support" width={24} height={24} className="mr-4 mt-1" />
+              <Image src="/images/icons/technical-support-1.png" alt="Technical Support" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h3 className="font-semibold">Technical Support:</h3>
+                <h3 className="font-semibold mb-2">Technical Support:</h3>
                 <p>Dedicated technical assistance to integrate with NEAR&apos;s AI ecosystem.</p>
               </div>
             </div>
             <div className="flex items-start">
-              <Image src="/images/icons/educational.svg" alt="Educational Resources" width={24} height={24} className="mr-4 mt-1" />
+              <Image src="/images/icons/idea-1.png" alt="Educational Resources" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h3 className="font-semibold">Educational Resources:</h3>
+                <h2 className="font-semibold mb-2">Educational Resources:</h2>
                 <p>Weekly sessions on topics including Go-To-Market strategy, token design, and more.</p>
               </div>
             </div>
@@ -144,7 +154,7 @@ const ProgramDetails: React.FC = () => {
         <div className="w-1/3">
           <div className="bg-[#9696FE] rounded-2xl p-4 mb-6">
             <Image 
-              src="/images/illustrations/support-benefits.svg" 
+              src="/images/illustrations/support-benefits-chip.svg" 
               alt="Support and Benefits Illustration" 
               width={300} 
               height={200} 

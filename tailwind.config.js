@@ -17,6 +17,14 @@ module.exports = {
         'custom-light-purple': '#9797ff',
         white: '#ffffff',
       },
+      inset: {
+        '15': '15%',
+        '35': '35%',
+      },
+      translate: {
+        '15': '15%',
+        '35': '35%',
+      },
     },
   },
   plugins: [],

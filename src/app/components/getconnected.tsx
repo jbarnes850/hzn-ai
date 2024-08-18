@@ -8,59 +8,80 @@ interface GetConnectedProps {
 const GetConnected: React.FC = () => {
   return (
     <div className="border border-[#9696FE] rounded-3xl p-8 text-white">
-      <h1 className="text-4xl font-bold mb-6">
+      <h1 className="text-3xl font-bold mb-8">
         Join the NEAR AI community and connect with like-minded innovators.
         Stay updated on the latest developments, participate in exclusive events,
         and engage with our ecosystem.
       </h1>
 
-      <div className="flex mt-8">
-        <div className="w-2/3 pr-8">
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Ways to Connect:</h2>
-          
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">Office Hours:</h3>
-            <ul className="list-disc list-inside">
-              <li>Join Office Hours with Illia Polosukhin</li>
-              <li>Watch Past Office Hours</li>
-            </ul>
+      <div className="flex mt-10">
+        <div className="w-2/3 pr-8 flex flex-col">
+          <div className="flex mb-8">
+            <div className="w-1/2 pr-4">
+              <h2 className="text-[25px] font-medium text-[#9696FE] mb-6 leading-[32px] tracking-[0.05em] font-['FK_Grotesk']">
+                Ways to Connect:
+              </h2>
+              
+              <div className="mb-8">
+                <h3 className="text-[18px] font-medium mb-3 leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']">
+                  Office Hours:
+                </h3>
+                <ul className="list-disc list-inside space-y-2 text-[18px] leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']">
+                  <li>Join Office Hours with Illia Polosukhin</li>
+                  <li>Watch Past Office Hours</li>
+                </ul>
+              </div>
+
+              <Link 
+                href="https://app.near.ai/" 
+                className="text-[#9696FE] underline block mb-8 text-[18px] leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Join the NEAR AI Developer Preview
+              </Link>
+            </div>
+
+            <div className="w-1/2 pl-4">
+              <h2 className="text-[25px] font-medium text-[#9696FE] mb-6 leading-[32px] tracking-[0.05em] font-['FK_Grotesk']">
+                Community Engagement:
+              </h2>
+              <p className="mb-6 text-[18px] leading-[23.04px] tracking-[0.05em] font-[&apos;FK_Grotesk&apos;]">
+                Engage with NEAR&apos;s community of developers, researchers, and
+                AI enthusiasts.
+              </p>
+            </div>
           </div>
 
-          <Link href="https://app.near.ai/" className="text-[#9696FE] underline" target="_blank" rel="noopener noreferrer">
-            NEAR AI Developer Preview
-          </Link>
-
-          <div className="mt-6 space-y-4">
+          <div className="space-y-4">
             <a href="https://airtable.com/appFoIqAoY0ikoVIb/pagU0oUzjCQPIYfqz/form" target="_blank" rel="noopener noreferrer">
-              <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-2 rounded-full w-full">
+              <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-3 rounded-full w-full hover:bg-[#9696FE] hover:text-black transition-colors text-[18px] leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']">
                 Sign up to join our exclusive Telegram community here
               </button>
             </a>
-            <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagsVjkk5LZ66MbJm/form" target="_blank" rel="noopener noreferrer">
-              <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-2 rounded-full w-full">
-                Get Involved with NEAR AI
-              </button>
-            </a>
-          </div>
-
-          <div className="mt-6">
-            <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Community Engagement:</h2>
-            <p>
-              Engage with NEAR&apos;s community of developers, researchers, and
-              AI enthusiasts.
-            </p>
           </div>
         </div>
 
         <div className="w-1/3">
-          <div className="bg-[#9696FE] rounded-2xl p-4">
+          <div className="bg-[#9696FE] rounded-2xl p-4 relative">
             <Image 
-              src="/images/illustrations/ai-community.svg" 
+              src="/images/illustrations/brain-hand-interface.svg" 
               alt="AI Community Illustration" 
               width={300}
               height={300}
               style={{ width: '100%', height: 'auto' }}
             />
+            <div className="absolute top-15 left-15 -translate-x-35 -translate-y-35 w-[145px] h-[84.64px]">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/illustrations/gears.svg"
+                  alt="Gears Illustration"
+                  layout="fill"
+                  objectFit="contain"
+                  className="text-[#9696FE]"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

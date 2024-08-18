@@ -4,21 +4,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
-interface NavItem {
-  name: string;
-  href: string;
+interface HeaderProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const navItems: NavItem[] = [
-    { name: 'Near AI', href: 'https://near.org/ai' },
-    { name: 'Platform', href: 'https://near.org/blockchain' },
-    { name: 'Develop', href: 'https://dev.near.org/' },
-    { name: 'Discover', href: 'https://nearcatalog.xyz/' },
-    { name: 'Ecosystem', href: 'https://near.org/ecosystem' },
-    { name: 'About', href: 'https://dev.near.org/learn' },
+  const navItems = [
+    { name: 'JOIN HZN' },
+    { name: 'PROGRAM DETAILS' },
+    { name: 'WHY HZN?' },
+    { name: 'GET CONNECTED' },
   ];
 
   const toggleMenu = (): void => {
@@ -28,23 +26,22 @@ const Header: React.FC = () => {
   return (
     <header className="w-full px-4 py-4 md:py-8 bg-black">
       <div className="max-w-[1421px] mx-auto flex justify-between items-center">
-        <div className="w-[231px] h-[93px] relative">
+        <div className="w-[150px] h-[60px] md:w-[231px] md:h-[93px] relative">
           <Image src="/images/logo/AI + HZN Logo.svg" alt="AI + HZN Logo" layout="fill" objectFit="contain" />
         </div>
         
         <nav className="hidden md:block">
-          <ul className="flex space-x-6">
-            {navItems.map((item, index) => (
+          <ul className="flex space-x-4">
+            {navItems.map((item) => (
               <li key={item.name}>
-                <Link 
-                  href={item.href}
-                  className="text-[#9797FF] text-xs font-medium font-['FK Grotesk'] hover:text-white transition-colors"
-                  style={{ left: `${987 + index * 71}px` }}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  className={`px-4 py-2 rounded-full text-sm ${
+                    item.name === activeTab ? 'bg-black text-[#9696FE] border border-[#9696FE]' : 'bg-[#9696FE] text-black'
+                  }`}
+                  onClick={() => setActiveTab(item.name)}
                 >
                   {item.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
@@ -66,14 +63,17 @@ const Header: React.FC = () => {
           <ul className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link 
-                  href={item.href}
-                  className="text-[#9797FF] text-xs font-medium font-['FK Grotesk'] hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  className={`w-full px-4 py-2 rounded-full text-sm ${
+                    item.name === activeTab ? 'bg-black text-[#9696FE] border border-[#9696FE]' : 'bg-[#9696FE] text-black'
+                  }`}
+                  onClick={() => {
+                    setActiveTab(item.name);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {item.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
