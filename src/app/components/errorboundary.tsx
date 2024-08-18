@@ -30,7 +30,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
       return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
           <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong.</h1>
-          <p className="text-xl mb-8">We're sorry for the inconvenience. Please try refreshing the page.</p>
+          <p className="text-xl mb-8">We&apos;re sorry for the inconvenience. Please try refreshing the page.</p>
           <button 
             onClick={() => this.setState({ hasError: false })}
             className="bg-[#9696FE] text-black px-6 py-2 rounded-full hover:bg-[#7a7ad1] transition-colors"

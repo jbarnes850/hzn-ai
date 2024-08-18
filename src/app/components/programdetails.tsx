@@ -13,12 +13,12 @@ interface Speaker {
 
 const ProgramDetails: React.FC = () => {
   const pastTeams: PastTeam[] = [
-    { name: 'Ringfence', logo: 'ringfence.svg' },
-    { name: 'Hyperbolic', logo: 'hyperbolic.png' },
-    { name: 'nevermined', logo: 'nevermined.png' },
-    { name: 'MIZU', logo: 'mizu-logo-1.png' },
-    { name: 'exaBITS', logo: 'exabits.png' },
-    { name: 'Pond', logo: 'pond.svg' }
+    { name: 'Ringfence', logo: '/images/logo/ringfence.svg' },
+    { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png' },
+    { name: 'nevermined', logo: '/images/logo/nevermined.png' },
+    { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png' },
+    { name: 'exaBITS', logo: '/images/logo/exabits.png' },
+    { name: 'Pond', logo: '/images/logo/pond.svg' }
   ];
 
   const speakers: Speaker[] = [

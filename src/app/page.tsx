@@ -1,7 +1,6 @@
 'use client'; // This is necessary for using hooks in Next.js 13+
 
 import { useState } from 'react';
-import Header from './components/header';
 import LandingPage from './components/landingpage';
 import WhyHZN from './components/whyhzn';
 import ProgramDetails from './components/programdetails';
@@ -29,7 +28,6 @@ export default function Home() {
   return (
     <ErrorBoundary>
       <main className="w-full min-h-screen bg-black text-white">
-        <Header />
         <div className="flex space-x-4 mb-8 p-8">
           {['JOIN HZN', 'WHY HZN?', 'PROGRAM DETAILS', 'GET CONNECTED'].map((item) => (
             <button 
