@@ -14,24 +14,24 @@ interface Speaker {
 const ProgramDetails: React.FC = () => {
   const pastTeams: PastTeam[] = [
     { name: 'Ringfence', logo: 'ringfence.svg' },
-    { name: 'Hyperbolic', logo: 'hyperbolic.svg' },
-    { name: 'nevermined', logo: 'nevermined.svg' },
-    { name: 'MIZU', logo: 'mizu.svg' },
-    { name: 'exaBITS', logo: 'exabits.svg' },
+    { name: 'Hyperbolic', logo: 'hyperbolic.png' },
+    { name: 'nevermined', logo: 'nevermined.png' },
+    { name: 'MIZU', logo: 'mizu-logo-1.png' },
+    { name: 'exaBITS', logo: 'exabits.png' },
     { name: 'Pond', logo: 'pond.svg' }
   ];
 
   const speakers: Speaker[] = [
-    { name: 'Illia Polosukhin', company: 'NEAR Foundation', image: 'illia-polosukhin.jpg' },
-    { name: 'Avichal Garg', company: 'Electric Capital', image: 'avichal-garg.jpg' },
-    { name: 'Alex Goldberg', company: 'Delphi Ventures', image: 'alex-goldberg.jpg' },
-    { name: 'Casey Caruso', company: 'Topology', image: 'casey-caruso.jpg' },
-    { name: 'Anand Iyer', company: 'Canonical Capital', image: 'anand-iyer.jpg' },
-    { name: 'Anthony Avadissian', company: 'Seed Club', image: 'anthony-avadissian.jpg' },
-    { name: 'Danny Sursock', company: 'Archetype', image: 'danny-sursock.jpg' },
-    { name: 'Sal Ternullo', company: 'a16z', image: 'sal-ternullo.jpg' },
-    { name: 'Christine Cai', company: 'Cicada Partners', image: 'christine-cai.jpg' },
-    { name: 'Altan Tutar', company: 'Truffle Labs', image: 'altan-tutar.jpg' },
+    { name: 'Illia Polosukhin', company: 'NEAR Foundation', image: 'illia.png' },
+    { name: 'Avichal Garg', company: 'Electric Capital', image: 'avichal.png' },
+    { name: 'Alex Goldberg', company: 'Delphi Ventures', image: 'alex.png' },
+    { name: 'Casey Caruso', company: 'Topology', image: 'casey-1.png' },
+    { name: 'Anand Iyer', company: 'Canonical Capital', image: 'anand.png' },
+    { name: 'Anthony Avadissian', company: 'Seed Club', image: 'anthony.png' },
+    { name: 'Danny Sursock', company: 'Archetype', image: 'danny.png' },
+    { name: 'Sal Ternullo', company: 'a16z', image: 'sal.png' },
+    { name: 'Christine Cai', company: 'Cicada Partners', image: 'christine.png' },
+    { name: 'Altan Tutar', company: 'Truffle Labs', image: 'altan.png' },
   ];
 
   return (
