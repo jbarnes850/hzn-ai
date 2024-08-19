@@ -28,14 +28,14 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col lg:flex-row items-center mb-16">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="flex flex-col lg:flex-row items-center mb-8 lg:mb-16">
           {/* Left Column - Main Content */}
-          <div className="w-full lg:w-1/2 lg:pr-12 mb-12 lg:mb-0">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-8">
-              User-Owned <br/>AI is NEAR
+          <div className="w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-8 text-center lg:text-left">
+              User-Owned <br className="hidden md:inline"/>AI is NEAR
             </h1>
-            <p className="text-xl md:text-2xl mb-12">
+            <p className="text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 text-center lg:text-left">
               Join our AI Incubation Program to pioneer decentralized AI applications.
             </p>
 
@@ -74,14 +74,14 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               <a href="https://near.ai/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2">
-                <button className="w-full bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-3 rounded-full text-lg hover:bg-[#9696FE] hover:text-black transition-colors whitespace-nowrap">
+                <button className="w-full bg-transparent border border-[#9696FE] text-[#9696FE] px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#9696FE] hover:text-black transition-colors whitespace-normal sm:whitespace-nowrap">
                   Read NEAR AI Master Plan
                 </button>
               </a>
               <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagVX3hSxzIj4Y680/form" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2">
-                <button className="w-full bg-[#9696FE] text-black px-6 py-3 rounded-full text-lg hover:bg-[#8080FF] transition-colors whitespace-nowrap">
+                <button className="w-full bg-[#9696FE] text-black px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#8080FF] transition-colors whitespace-normal sm:whitespace-nowrap">
                   Apply for the Program
                 </button>
               </a>
@@ -91,12 +91,12 @@ const LandingPage: React.FC = () => {
 
         {/* Featured AI Projects */}
         <div className="mt-16">
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Featured AI Projects</h2>
+          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4 text-center lg:text-left">Featured AI Projects</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {featuredProjects.map((project) => (
               <div 
                 key={project.name} 
-                className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
+                className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-24 md:h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
               >
                 <Image 
                   src={project.logo} 
@@ -104,7 +104,7 @@ const LandingPage: React.FC = () => {
                   width={120} 
                   height={60} 
                   objectFit="contain"
-                  className="max-h-24"
+                  className="max-h-16 md:max-h-24"
                 />
               </div>
             ))}

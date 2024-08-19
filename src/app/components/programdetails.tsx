@@ -35,10 +35,10 @@ const ProgramDetails: React.FC = () => {
   ];
 
   return (
-    <div className="border border-[#9696FE] rounded-3xl p-12 text-white">
-      <div className="flex mb-12 gap-12">
+    <div className="border border-[#9696FE] rounded-3xl p-4 md:p-12 text-white">
+      <div className="flex flex-col md:flex-row mb-8 md:mb-12 gap-8 md:gap-12">
         {/* Left Column - Image and Apply Button */}
-        <div className="w-1/2 pr-8">
+        <div className="w-full md:w-1/2 md:pr-8">
           <div className="bg-[#9696FE] rounded-2xl p-4 mb-6">
             <Image 
               src="/images/illustrations/program-details-cal.svg" 
@@ -49,36 +49,36 @@ const ProgramDetails: React.FC = () => {
             />
           </div>
           <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagVX3hSxzIj4Y680/form" target="_blank" rel="noopener noreferrer">
-            <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-2 rounded-full w-full">
+            <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-4 md:px-6 py-2 md:py-3 rounded-full w-full text-sm md:text-base">
               Apply for the NEAR AI Incubation Program
             </button>
           </a>
         </div>
 
         {/* Right Column - Program Details */}
-        <div className="w-1/2">
-          <h1 className="text-3xl font-bold mb-6">
+        <div className="w-full md:w-1/2">
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
             <span className="text-[#9696FE]">AI + HZN Batch II</span> starts September 23rd, 2024
           </h1>
-          <p className="mb-6">
+          <p className="mb-4 md:mb-6 text-sm md:text-base">
             Empowering top-tier AI and blockchain founders with resources and support.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Program Overview:</h2>
+          <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-3 md:mb-4">Program Overview:</h2>
 
-          <div className="space-y-4 mb-8">
+          <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
             <div>
-              <p className="font-semibold mb-1">Start Date: September 23rd, 2024</p>
-              <p>Time Commitment: 3-5 hours per week</p>
+              <p className="font-semibold mb-1 text-sm md:text-base">Start Date: September 23rd, 2024</p>
+              <p className="text-sm md:text-base">Time Commitment: 3-5 hours per week</p>
             </div>
-            <p>
+            <p className="text-sm md:text-base">
               We take a boutique approach with our founders. 
               Our cohort sizes are small, focusing on 4-6 teams in each batch.
             </p>
           </div>
 
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Profiles of Previous Founders</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-3 md:mb-4">Profiles of Previous Founders</h2>
+          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
             <li>Repeat founders with strong technical skills.</li>
             <li>AI/ML Researchers spinning out projects from academic institutions</li>
             <li>Ex-VCs with a unique perspective on the market</li>
@@ -88,21 +88,21 @@ const ProgramDetails: React.FC = () => {
       </div>
 
       {/* Featured Projects */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Featured AI Projects</h2>
-        <div className="grid grid-cols-3 gap-4">
+      <div className="mb-8 md:mb-12">
+        <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-4">Featured AI Projects</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {featuredProjects.map((project) => (
             <div 
               key={project.name} 
-              className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
+              className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-24 md:h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
             >
               <Image 
                 src={project.logo} 
                 alt={project.name} 
-                width={120} 
-                height={60} 
+                width={100} 
+                height={50} 
                 objectFit="contain"
-                className="max-h-24"
+                className="max-h-20 md:max-h-24"
               />
             </div>
           ))}
@@ -110,13 +110,13 @@ const ProgramDetails: React.FC = () => {
       </div>
 
       {/* Previous Speakers */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Previous Speakers Include:</h2>
-        <div className="grid grid-cols-5 gap-6">
+      <div className="mb-8 md:mb-12">
+        <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-4">Previous Speakers Include:</h2>
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
           {speakers.map((speaker) => (
             <div key={speaker.name} className="text-center flex flex-col items-center">
-              <Image src={`/images/headshots/${speaker.image}`} alt={speaker.name} width={80} height={80} className="rounded-full mb-3" />
-              <p className="font-semibold text-sm mb-1">{speaker.name}</p>
+              <Image src={`/images/headshots/${speaker.image}`} alt={speaker.name} width={60} height={60} className="rounded-full mb-2 md:mb-3" />
+              <p className="font-semibold text-xs md:text-sm mb-1">{speaker.name}</p>
               <p className="text-xs">{speaker.company}</p>
             </div>
           ))}
@@ -124,34 +124,34 @@ const ProgramDetails: React.FC = () => {
       </div>
 
       {/* Support and Benefits */}
-      <div className="flex">
-        <div className="w-2/3 pr-8">
-          <h2 className="text-2xl font-semibold text-[#9696FE] mb-6">Support and Benefits:</h2>
-          <div className="space-y-8">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-2/3 md:pr-8 mb-6 md:mb-0">
+          <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-4 md:mb-6">Support and Benefits:</h2>
+          <div className="space-y-6 md:space-y-8">
             <div className="flex items-start">
               <Image src="/images/icons/coin-1.png" alt="Financial Support" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">Financial Support:</h3>
-                <p>Token-based grants and compute credits from the NEAR Foundation.</p>
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Financial Support:</h3>
+                <p className="text-sm md:text-base">Token-based grants and compute credits from the NEAR Foundation.</p>
               </div>
             </div>
             <div className="flex items-start">
               <Image src="/images/icons/technical-support-1.png" alt="Technical Support" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">Technical Support:</h3>
-                <p>Dedicated technical assistance to integrate with NEAR&apos;s AI ecosystem.</p>
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Technical Support:</h3>
+                <p className="text-sm md:text-base">Dedicated technical assistance to integrate with NEAR&apos;s AI ecosystem.</p>
               </div>
             </div>
             <div className="flex items-start">
               <Image src="/images/icons/idea-1.png" alt="Educational Resources" width={24} height={24} className="mr-4 mt-1" />
               <div>
-                <h2 className="font-semibold mb-2">Educational Resources:</h2>
-                <p>Weekly sessions on topics including Go-To-Market strategy, token design, and more.</p>
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Educational Resources:</h3>
+                <p className="text-sm md:text-base">Weekly sessions on topics including Go-To-Market strategy, token design, and more.</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <div className="bg-[#9696FE] rounded-2xl p-4 mb-6">
             <Image 
               src="/images/illustrations/support-benefits-chip.svg" 
@@ -162,7 +162,7 @@ const ProgramDetails: React.FC = () => {
             />
           </div>
           <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagVX3hSxzIj4Y680/form" target="_blank" rel="noopener noreferrer">
-            <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-6 py-2 rounded-full w-full">
+            <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-4 md:px-6 py-2 md:py-3 rounded-full w-full text-sm md:text-base">
               Apply for the NEAR AI Incubation Program
             </button>
           </a>
