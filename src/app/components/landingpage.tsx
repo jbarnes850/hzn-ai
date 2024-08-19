@@ -8,6 +8,7 @@ interface Feature {
 interface AIProject {
   name: string;
   logo: string;
+  url: string;
 }
 
 const LandingPage: React.FC = () => {
@@ -18,12 +19,12 @@ const LandingPage: React.FC = () => {
   ];
 
   const featuredProjects: AIProject[] = [
-    { name: 'Ringfence', logo: '/images/logo/ringfence.svg' },
-    { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png' },
-    { name: 'nevermined', logo: '/images/logo/nevermind.png' },
-    { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png' },
-    { name: 'exaBITS', logo: '/images/logo/exabits.png' },
-    { name: 'Pond', logo: '/images/logo/pond.svg' }
+    { name: 'Ringfence', logo: '/images/logo/ringfence.svg', url: 'https://www.ringfence.ai/' },
+    { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png', url: 'https://hyperbolic.xyz/' },
+    { name: 'nevermined', logo: '/images/logo/nevermind.png', url: 'https://nevermined.io/' },
+    { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png', url: 'https://mizu.global/' },
+    { name: 'exaBITS', logo: '/images/logo/exabits.png', url: 'https://exabits.ai/' },
+    { name: 'Pond', logo: '/images/logo/pond.svg', url: 'https://cryptopond.xyz/' }
   ];
 
   return (
@@ -94,8 +95,11 @@ const LandingPage: React.FC = () => {
           <h2 className="text-2xl font-semibold text-[#9696FE] mb-4 text-center lg:text-left">Featured AI Projects</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {featuredProjects.map((project) => (
-              <div 
-                key={project.name} 
+              <a 
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-24 md:h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
               >
                 <Image 
@@ -106,7 +110,7 @@ const LandingPage: React.FC = () => {
                   objectFit="contain"
                   className="max-h-16 md:max-h-24"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -3,12 +3,19 @@ import './globals.css'
 import Footer from './components/footer'
 import { Analytics } from "@vercel/analytics/react"
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#9696FE',
+}
+
 export const metadata: Metadata = {
   title: {
     default: 'AI + HZN | NEAR AI Incubation Program',
     template: '%s | AI + HZN'
   },
   description: 'Build the next generation of decentralized AI applications with NEAR. Join our Incubation Program for funding, resources, and mentorship.',
+  metadataBase: new URL('https://ai-hzn.vercel.app'),
   keywords: ['AI', 'Blockchain', 'NEAR', 'Incubation', 'Decentralized AI', 'Funding', 'Web3'],
   authors: [{ name: 'NEAR Foundation' }],
   openGraph: {
@@ -37,8 +44,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#9696FE',
   alternates: {
     canonical: 'https://hzn-ai.vercel.app',
   },
