@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Footer from './components/footer'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +46,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <main className="flex-grow">
             {children}
+            <Analytics />
           </main>
           <Footer />
         </div>
