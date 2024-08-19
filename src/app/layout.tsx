@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     default: 'AI + HZN | NEAR AI Incubation Program',
     template: '%s | AI + HZN'
   },
-  description: 'Join our AI Incubation Program to pioneer the next generation of decentralized AI applications on NEAR.',
-  keywords: ['AI', 'Blockchain', 'NEAR', 'Incubation', 'Decentralized AI'],
+  description: 'Pioneer decentralized AI applications with NEAR. Join our Incubation Program for funding, resources, and connections.',
+  keywords: ['AI', 'Blockchain', 'NEAR', 'Incubation', 'Decentralized AI', 'Funding', 'Web3'],
   authors: [{ name: 'NEAR Foundation' }],
   openGraph: {
     title: 'AI + HZN | NEAR AI Incubation Program',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'AI + HZN',
     images: [
       {
-        url: 'https://near.org/og-image.jpg', // Replace with your actual OG image
+        url: 'https://pbs.twimg.com/profile_images/1665711433651310592/qHT7hLa5_400x400.png',
         width: 1200,
         height: 630,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'AI + HZN | NEAR AI Incubation Program',
     description: 'Pioneer the next generation of decentralized AI applications with NEAR.',
     creator: '@NEARProtocol',
-    images: ['https://near.org/twitter-image.jpg'], // Replace with your actual Twitter image
+    images: ['https://pbs.twimg.com/profile_images/1809571361431425024/9RTTZYzz_400x400.jpg'],
   },
 }
 

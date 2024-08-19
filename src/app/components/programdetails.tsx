@@ -58,10 +58,10 @@ const ProgramDetails: React.FC = () => {
         {/* Right Column - Program Details */}
         <div className="w-1/2">
           <h1 className="text-3xl font-bold mb-6">
-            The <span className="text-[#9696FE]">AI + HZN Batch II</span> begins on September 23rd, 2024.
+            <span className="text-[#9696FE]">AI + HZN Batch II</span> starts September 23rd, 2024
           </h1>
           <p className="mb-6">
-            Our program is designed to support top-tier AI and blockchain founders with a comprehensive suite of resources and support.
+            Empowering top-tier AI and blockchain founders with resources and support.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#9696FE] mb-4">Program Overview:</h2>

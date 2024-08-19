@@ -36,7 +36,7 @@ const LandingPage: React.FC = () => {
               User-Owned <br/>AI is NEAR
             </h1>
             <p className="text-xl md:text-2xl mb-12">
-              Join our AI Incubation Program to pioneer the next generation of decentralized AI applications.
+              Join our AI Incubation Program to pioneer decentralized AI applications.
             </p>
 
             {/* Feature List */}

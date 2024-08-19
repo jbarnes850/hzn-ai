@@ -40,10 +40,15 @@ const WhyHZN: React.FC = () => {
     <div className="border border-[#9696FE] rounded-3xl p-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="flex flex-col justify-between">
-          <h1 className="text-5xl font-bold mb-8">Why Choose HZN for Your AI Journey?</h1>
-          
+          <h1 className="text-5xl font-bold mb-8">Why Choose HZN?</h1>
+          <div className="flex flex-col gap-4"></div>
           <p className="text-xl mb-8">
-            At NEAR Horizon, we&apos;re dedicated to empowering the next generation of AI pioneers. By joining our incubation program, you&apos;ll be at the forefront of developing decentralized AI applications that prioritize user ownership and privacy.
+            Accelerate your AI project with NEAR Horizon.
+            <br />
+            <br />
+            Build decentralized AI applications prioritizing user ownership
+            <br />
+            and privacy.
           </p>
 
           <div className="space-y-8">
@@ -59,8 +64,8 @@ const WhyHZN: React.FC = () => {
         <div className="space-y-12">
           {sections.map((section, index) => (
             <div key={index} className="flex items-start">
-              <div className="w-[120px] h-[100px] bg-[#9797ff] rounded-[20px] flex items-center justify-center mr-6 flex-shrink-0">
-                <Image src={section.icon} alt={section.title} width={50} height={50} />
+              <div className="w-[100px] h-[80px] bg-[#9797ff] rounded-[16px] flex items-center justify-center mr-4 flex-shrink-0">
+                <Image src={section.icon} alt={section.title} width={45} height={45} />
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-3">{section.title}</h3>

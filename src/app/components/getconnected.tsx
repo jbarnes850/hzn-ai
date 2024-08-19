@@ -28,18 +28,10 @@ const GetConnected: React.FC = () => {
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-[18px] leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']">
                   <li>Join Office Hours with Illia Polosukhin</li>
-                  <li>Watch Past Office Hours</li>
+                  <li><a href="https://www.youtube.com/@NEARProtocol/streams" target="_blank" rel="noopener noreferrer" className="text-[#9696FE] hover:underline">Watch Past Office Hours</a></li>
+                  <li><a href="https://app.near.ai/" target="_blank" rel="noopener noreferrer" className="text-[#9696FE] hover:underline">Join the NEAR AI Developer Preview</a></li>
                 </ul>
               </div>
-
-              <Link 
-                href="https://app.near.ai/" 
-                className="text-[#9696FE] underline block mb-8 text-[18px] leading-[23.04px] tracking-[0.05em] font-['FK_Grotesk']" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Join the NEAR AI Developer Preview
-              </Link>
             </div>
 
             <div className="w-1/2 pl-4">
