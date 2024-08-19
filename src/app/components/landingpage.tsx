@@ -76,13 +76,13 @@ const LandingPage: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-              <a href="https://near.ai/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2">
-                <button className="w-full bg-transparent border border-[#9696FE] text-[#9696FE] px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#9696FE] hover:text-black transition-colors whitespace-normal sm:whitespace-nowrap">
+              <a href="https://near.ai/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-3/5">
+                <button className="w-full bg-transparent border border-[#9696FE] text-[#9696FE] px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#9696FE] hover:text-black transition-colors whitespace-normal sm:whitespace-nowrap flex items-center justify-center">
                   Read NEAR AI Master Plan
                 </button>
               </a>
-              <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagVX3hSxzIj4Y680/form" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2">
-                <button className="w-full bg-[#9696FE] text-black px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#8080FF] transition-colors whitespace-normal sm:whitespace-nowrap">
+              <a href="https://airtable.com/appc0ZVhbKj8hMLvH/pagVX3hSxzIj4Y680/form" target="_blank" rel="noopener noreferrer" className="w-full sm:w-2/5">
+                <button className="w-full bg-[#9696FE] text-black px-4 py-3 rounded-full text-base md:text-lg hover:bg-[#8080FF] transition-colors whitespace-normal sm:whitespace-nowrap flex items-center justify-center">
                   Apply for the Program
                 </button>
               </a>
@@ -100,15 +100,15 @@ const LandingPage: React.FC = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-24 md:h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
+                className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-28 md:h-36 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
               >
                 <Image 
                   src={project.logo} 
                   alt={project.name} 
-                  width={120} 
-                  height={60} 
+                  width={140} 
+                  height={70} 
                   objectFit="contain"
-                  className="max-h-16 md:max-h-24"
+                  className="max-h-20 md:max-h-28"
                 />
               </a>
             ))}

@@ -3,6 +3,7 @@ import Image from 'next/image';
 interface FeaturedProject {
   name: string;
   logo: string;
+  url: string;
 }
 
 interface Speaker {
@@ -13,12 +14,12 @@ interface Speaker {
 
 const ProgramDetails: React.FC = () => {
   const featuredProjects: FeaturedProject[] = [
-    { name: 'Ringfence', logo: '/images/logo/ringfence.svg' },
-    { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png' },
-    { name: 'nevermined', logo: '/images/logo/nevermind.png' },
-    { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png' },
-    { name: 'exaBITS', logo: '/images/logo/exabits.png' },
-    { name: 'Pond', logo: '/images/logo/pond.svg' }
+    { name: 'Ringfence', logo: '/images/logo/ringfence.svg', url: 'https://www.ringfence.ai/' },
+    { name: 'Hyperbolic', logo: '/images/logo/hyperbolic.png', url: 'https://hyperbolic.xyz/' },
+    { name: 'nevermined', logo: '/images/logo/nevermind.png', url: 'https://nevermined.io/' },
+    { name: 'MIZU', logo: '/images/logo/mizu-logo-1.png', url: 'https://mizu.global/' },
+    { name: 'exaBITS', logo: '/images/logo/exabits.png', url: 'https://exabits.ai/' },
+    { name: 'Pond', logo: '/images/logo/pond.svg', url: 'https://cryptopond.xyz/' }
   ];
 
   const speakers: Speaker[] = [
@@ -91,19 +92,22 @@ const ProgramDetails: React.FC = () => {
         <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-4">Featured AI Projects</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {featuredProjects.map((project) => (
-            <div 
-              key={project.name} 
-              className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-24 md:h-32 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
+            <a
+              key={project.name}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#1E1E1E] p-4 rounded-lg flex items-center justify-center h-28 md:h-36 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#2A2A2A] cursor-pointer"
             >
               <Image 
                 src={project.logo} 
                 alt={project.name} 
-                width={100} 
-                height={50} 
+                width={120} 
+                height={60} 
                 objectFit="contain"
-                className="max-h-20 md:max-h-24"
+                className="max-h-24 md:max-h-28"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
