@@ -29,7 +29,6 @@ const ProgramDetails: React.FC = () => {
     { name: 'Anand Iyer', company: 'Canonical Capital', image: 'anand.png' },
     { name: 'Anthony Avadissian', company: 'Seed Club', image: 'anthony.png' },
     { name: 'Danny Sursock', company: 'Archetype', image: 'danny.png' },
-    { name: 'Sal Ternullo', company: 'a100x', image: 'sal.png' },
     { name: 'Christine Cai', company: 'Cicada Partners', image: 'christine.png' },
     { name: 'Altan Tutar', company: 'Truffle Labs', image: 'altan.png' },
   ];
