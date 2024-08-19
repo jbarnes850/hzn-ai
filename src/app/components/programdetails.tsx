@@ -111,7 +111,7 @@ const ProgramDetails: React.FC = () => {
       {/* Previous Speakers */}
       <div className="mb-8 md:mb-12">
         <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-4">Previous Speakers Include:</h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
           {speakers.map((speaker) => (
             <div key={speaker.name} className="text-center flex flex-col items-center">
               <Image src={`/images/headshots/${speaker.image}`} alt={speaker.name} width={60} height={60} className="rounded-full mb-2 md:mb-3" />
