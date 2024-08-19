@@ -27,7 +27,13 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
     <header className="w-full px-4 py-4 md:py-8 bg-black">
       <div className="max-w-[1421px] mx-auto flex justify-between items-center">
         <div className="w-[150px] h-[60px] md:w-[231px] md:h-[93px] relative">
-          <Image src="/images/logo/AI + HZN Logo.svg" alt="AI + HZN Logo" layout="fill" objectFit="contain" />
+          <Image 
+            src="/images/logo/ai-hzn-logo.svg" 
+            alt="AI + HZN Logo" 
+            width={231} 
+            height={93} 
+            priority
+          />
         </div>
         
         <nav className="hidden md:block">
