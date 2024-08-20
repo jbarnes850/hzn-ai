@@ -31,7 +31,7 @@ const ProgramDetails: React.FC = () => {
     { name: 'Anthony Avadissian', company: 'Seed Club', image: 'anthony.png' },
     { name: 'Danny Sursock', company: 'Archetype', image: 'danny.png' },
     { name: 'Christine Cai', company: 'Cicada Partners', image: 'christine.png' },
-    { name: 'Altan Tutar', company: 'Truffle Labs', image: 'altan.png' },
+    { name: 'Altan Tutar', company: 'Nuffle Labs', image: 'altan.png' },
   ];
 
   return (
