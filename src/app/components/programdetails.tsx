@@ -58,7 +58,7 @@ const ProgramDetails: React.FC = () => {
         {/* Right Column - Program Details */}
         <div className="w-full md:w-1/2">
           <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
-            <span className="text-[#9696FE]">AI + HZN Batch II</span> starts September 23rd, 2024
+            <span className="text-[#9696FE]">AI + HZN Batch II</span> starts October 14th, 2024
           </h1>
           <p className="mb-4 md:mb-6 text-sm md:text-base">
             Empowering top-tier AI and blockchain founders with resources and support.
@@ -68,7 +68,7 @@ const ProgramDetails: React.FC = () => {
 
           <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
             <div>
-              <p className="font-semibold mb-1 text-sm md:text-base">Start Date: September 23rd, 2024</p>
+              <p className="font-semibold mb-1 text-sm md:text-base">Start Date: October 14th, 2024</p>
               <p className="text-sm md:text-base">Time Commitment: 3-5 hours per week</p>
             </div>
             <p className="text-sm md:text-base">
@@ -78,12 +78,17 @@ const ProgramDetails: React.FC = () => {
           </div>
 
           <h2 className="text-xl md:text-2xl font-semibold text-[#9696FE] mb-3 md:mb-4">Profiles of Previous Founders</h2>
-          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+          <ul className="list-disc list-inside space-y-2 text-sm md:text-base mb-4 md:mb-6">
             <li>Repeat founders with strong technical skills.</li>
             <li>AI/ML Researchers spinning out projects from academic institutions</li>
             <li>Ex-VCs with a unique perspective on the market</li>
             <li>Degens who understand crypto native distribution</li>
           </ul>
+          <a href="https://near.org/blog/near-foundation-launches-ai-incubation-program" target="_blank" rel="noopener noreferrer">
+            <button className="bg-transparent border border-[#9696FE] text-[#9696FE] px-4 md:px-6 py-2 md:py-3 rounded-full w-full text-sm md:text-base hover:bg-[#9696FE] hover:text-black transition-colors">
+              Learn more about our alumni
+            </button>
+          </a>
         </div>
       </div>
 
