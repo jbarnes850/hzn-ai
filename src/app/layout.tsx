@@ -3,6 +3,8 @@ import './globals.css'
 import Footer from './components/footer'
 import { Analytics } from "@vercel/analytics/react"
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://hzn-ai.vercel.app'
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -15,17 +17,17 @@ export const metadata: Metadata = {
     template: '%s | AI + HZN'
   },
   description: 'Build the next generation of decentralized AI applications with NEAR. Join our Incubation Program for funding, resources, and mentorship.',
-  metadataBase: new URL('https://ai-hzn.vercel.app'),
+  metadataBase: new URL(baseUrl),
   keywords: ['AI', 'Blockchain', 'NEAR', 'Incubation', 'Decentralized AI', 'Funding', 'Web3'],
   authors: [{ name: 'NEAR Foundation' }],
   openGraph: {
     title: 'AI + HZN | NEAR AI Incubation Program',
     description: 'Build the next generation of decentralized AI applications with NEAR.',
-    url: 'https://hzn-ai.vercel.app',
-    siteName: 'AI + HZN',
+    url: baseUrl,
+    siteName: process.env.NEXT_PUBLIC_SITE_NAME,
     images: [
       {
-        url: '/images/seo/@HZN+AI Graphic 1200x630.png',
+        url: `${baseUrl}/images/seo/@HZN+AI Graphic 1200x630.png`,
         width: 1200,
         height: 630,
       },
@@ -38,14 +40,14 @@ export const metadata: Metadata = {
     title: 'AI + HZN | NEAR AI Incubation Program',
     description: 'Pioneer the next generation of decentralized AI applications with NEAR.',
     creator: '@NEARProtocol',
-    images: ['https://pbs.twimg.com/profile_images/1809571361431425024/9RTTZYzz_400x400.jpg'],
+    images: [`${baseUrl}/images/seo/@HZN+AI Graphic 1200x630.png`],
   },
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   alternates: {
-    canonical: 'https://hzn-ai.vercel.app',
+    canonical: baseUrl,
   },
   other: {
     'og:locale': 'en_US',
