@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
         © {new Date().getFullYear()} NEAR Foundation. All rights reserved.
       </div>
       <div className="mt-2">
-        <a href="https://dev.near.org/privacy" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+        <a href="https://drive.google.com/file/d/1Zyrb3Xsp26wgoUtAX8jyHoPm2yQwHKUL/view?usp=sharing" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
           Privacy Policy
         </a>
       </div>
